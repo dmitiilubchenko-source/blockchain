@@ -1,0 +1,109 @@
+[
+  {
+    "inputs": [{"internalType": "string","name": "deviceId","type": "string"}],
+    "name": "registerDevice",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {"internalType": "string","name": "deviceId","type": "string"},
+      {"internalType": "address","name": "client","type": "address"}
+    ],
+    "name": "grantAccess",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {"internalType": "string","name": "deviceId","type": "string"},
+      {"internalType": "address","name": "client","type": "address"}
+    ],
+    "name": "revokeAccess",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {"internalType": "string","name": "deviceId","type": "string"},
+      {"internalType": "string","name": "actionType","type": "string"}
+    ],
+    "name": "recordAccess",
+    "outputs": [],
+    "stateMutability": "nonpayable",
+    "type": "function"
+  },
+  {
+    "inputs": [{"internalType": "string","name": "deviceId","type": "string"}],
+    "name": "getHistoryCount",
+    "outputs": [{"internalType": "uint256","name": "","type": "uint256"}],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {"internalType": "string","name": "deviceId","type": "string"},
+      {"internalType": "uint256","name": "index","type": "uint256"}
+    ],
+    "name": "getHistoryItem",
+    "outputs": [
+      {"internalType": "string","name": "","type": "string"},
+      {"internalType": "address","name": "","type": "address"},
+      {"internalType": "string","name": "","type": "string"},
+      {"internalType": "uint256","name": "","type": "uint256"}
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {"internalType": "string","name": "deviceId","type": "string"},
+      {"internalType": "address","name": "client","type": "address"}
+    ],
+    "name": "hasAccess",
+    "outputs": [{"internalType": "bool","name": "","type": "bool"}],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {"indexed": false,"internalType": "string","name": "deviceId","type": "string"},
+      {"indexed": false,"internalType": "address","name": "owner","type": "address"}
+    ],
+    "name": "DeviceRegistered",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {"indexed": false,"internalType": "string","name": "deviceId","type": "string"},
+      {"indexed": false,"internalType": "address","name": "client","type": "address"}
+    ],
+    "name": "AccessGranted",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {"indexed": false,"internalType": "string","name": "deviceId","type": "string"},
+      {"indexed": false,"internalType": "address","name": "client","type": "address"}
+    ],
+    "name": "AccessRevoked",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {"indexed": false,"internalType": "string","name": "deviceId","type": "string"},
+      {"indexed": false,"internalType": "address","name": "client","type": "address"},
+      {"indexed": false,"internalType": "string","name": "actionType","type": "string"},
+      {"indexed": false,"internalType": "uint256","name": "timestamp","type": "uint256"}
+    ],
+    "name": "AccessRecorded",
+    "type": "event"
+  }
+]
